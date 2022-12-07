@@ -37,6 +37,7 @@
 
     @include respond(tab-port) {
       position: fixed;
+      top: 7.5rem;
       display: block;
 
       min-height: 20vh;
