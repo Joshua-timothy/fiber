@@ -1,0 +1,128 @@
+.feature-bg {
+  background-color: #ffffed;
+}
+
+.feature-con {
+  padding: 4rem 6rem;
+  @include respond(tab-port) {
+    scroll-margin-top: 8rem;
+  }
+
+  @include respond(phone) {
+    padding-inline: 2rem;
+  }
+
+  &__title {
+    padding-bottom: 4rem;
+
+    &--sub {
+      font-size: 1.6rem;
+      color: $color-primary;
+    }
+
+    &--main {
+      font-size: 3rem;
+      width: 50%;
+      line-height: 3.5rem;
+
+      @include respond(phone) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.feature {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+
+  @include respond(tab-port) {
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+
+  &__item {
+    border: 1px solid #5e00c236;
+    /*  box-shadow: 0 0.1rem 1rem hsla(269, 100%, 38%, 0.286); */
+    border-radius: 0.5rem;
+    padding: 2rem;
+
+    @include respond(tab-port) {
+      max-width: 60rem;
+      margin-inline: auto;
+    }
+
+    &--main {
+      font-size: 1.6rem;
+    }
+
+    &--sub {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__trial {
+    display: flex;
+    align-items: center;
+    padding-inline: 4rem;
+    padding-top: 4rem;
+    background-color: $color-primary;
+    border-radius: 0.5rem;
+    margin: 4rem 0rem;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      padding-inline: 2rem;
+      padding-top: 2rem;
+    }
+
+    @include respond(phone) {
+      padding-inline: 1.5rem;
+    }
+
+    &-text {
+      @include respond(tab-port) {
+        margin-bottom: 2rem;
+      }
+
+      &--main {
+        font-size: 3rem;
+        color: #ffffed;
+      }
+
+      &--sub {
+        font-size: 1.6rem;
+        color: #fae6ed;
+        width: 70%;
+
+        @include respond(phone) {
+          width: 100%;
+        }
+      }
+
+      &--link {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: $color-primary;
+        background-color: #ffffed;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        display: inline-block;
+      }
+    }
+
+    &-pic {
+      width: 70%;
+
+      @include respond(tab-port) {
+        width: 100%;
+      }
+
+      &--img {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+}

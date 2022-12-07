@@ -1,0 +1,138 @@
+.hero {
+  padding: 0 6rem;
+  padding-bottom: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include respond(tab-port) {
+    flex-direction: column-reverse;
+  }
+
+  @include respond(phone) {
+    padding-inline: 2rem;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    @include respond(phone) {
+      display: none;
+    }
+
+    &--star {
+      img {
+        width: 1.7rem;
+      }
+    }
+
+    &--text {
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+  }
+
+  &__text {
+    &--main {
+      font-size: 6rem;
+      line-height: 7rem;
+
+      @include respond(tab-port) {
+        font-size: 3.5rem;
+        line-height: 5rem;
+      }
+
+      @include respond(phone) {
+        line-height: 4.2rem;
+      }
+    }
+
+    &--sub {
+      font-size: 1.6rem;
+      color: $color-grey-dark;
+    }
+  }
+
+  &__link {
+    @include respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    &--trial {
+      color: #ffffed;
+      padding: 1rem;
+      background-color: $color-primary;
+      border-radius: 0.5rem;
+      display: inline-block;
+      font-size: 1.6rem;
+      margin-right: 2rem;
+
+      @include respond(tab-port) {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+        width: 100%;
+        max-width: 30rem;
+        text-align: center;
+      }
+      @include respond(phone) {
+        width: 100%;
+
+        max-width: 100%;
+      }
+    }
+
+    &--example {
+      font-size: 1.6rem;
+      color: $color-primary;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  }
+
+  &__pic {
+    width: 70%;
+
+    @include respond(phone) {
+      width: 75%;
+    }
+    &--img {
+      width: 100%;
+
+      @include respond(tab-port) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  &__feature {
+    display: flex;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+
+    &--text {
+      display: flex;
+      align-items: center;
+      font-size: 1.6rem;
+      color: $color-grey-dark;
+
+      &:not(:last-child) {
+        margin-right: 1.6rem;
+
+        @include respond(tab-port) {
+          margin-right: 0;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    &--img {
+      margin-right: 0.5rem;
+    }
+  }
+}

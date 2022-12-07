@@ -1,0 +1,81 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 4.5rem 6rem;
+
+  @include respond(tab-port) {
+    flex-wrap: wrap;
+    row-gap: 2rem;
+    column-gap: 5rem;
+    padding: 4.5rem 2rem;
+  }
+
+  &__item:first-child {
+    width: 30%;
+    color: $color-grey-dark;
+    @include respond(tab-port) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__item {
+    font-size: 1.6rem;
+
+    @include respond(tab-port) {
+      text-align: start;
+
+      &:not(:last-child) {
+        margin-bottom: 1.6rem;
+      }
+    }
+
+    &--main {
+      color: #000;
+      margin-bottom: 1rem;
+    }
+
+    &-ul {
+      &--list {
+        margin-bottom: 0.5rem;
+      }
+
+      &--link,
+      &--link:link,
+      &--link:visited {
+        color: $color-grey-dark;
+
+        &:hover {
+          color: $color-primary;
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+  font-size: 1.6rem;
+  color: $color-grey-dark;
+
+  @include respond(phone) {
+    font-size: 1.2rem;
+  }
+
+  &__img {
+    width: 1.6rem;
+    margin: 0;
+    display: block;
+    margin-inline: 0.3rem;
+  }
+
+  span {
+    text-decoration: underline;
+    color: $color-primary;
+    margin-left: 0.3rem;
+    font-weight: 600;
+  }
+}

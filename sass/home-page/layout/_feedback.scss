@@ -1,0 +1,108 @@
+.feedback {
+  padding-inline: 6rem;
+  padding-bottom: 6rem;
+  display: flex;
+  justify-content: space-between;
+  @include respond(tab-port) {
+    scroll-margin-top: 10rem;
+  }
+
+  @include respond(tab-port) {
+    flex-wrap: wrap;
+    max-width: 60rem;
+    margin-inline: auto;
+    padding-inline: 2rem;
+  }
+  &__item {
+    padding: 2rem;
+    border: 1px solid #f6ecdb;
+    border-radius: 0.5rem;
+
+    &:first-child {
+      border-right: transparent;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:nth-child(2) {
+      border-right: transparent;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:nth-child(3) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    @include respond(tab-port) {
+      &:first-child {
+        border-bottom: transparent;
+        border-right: 1px solid #f6ecdb;
+        border-top-right-radius: 0.5rem;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      &:nth-child(2) {
+        border-bottom: transparent;
+        border-right: 1px solid #f6ecdb;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      &:nth-child(3) {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0.5rem;
+        border-top-right-radius: 0;
+      }
+    }
+  }
+  &__profile {
+    display: flex;
+    align-items: center;
+  }
+
+  &__avatar {
+    width: 4rem;
+    margin-right: 1rem;
+  }
+
+  &__des {
+    &--main {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: $color-primary;
+      font-family: "Raleway", sans-serif;
+    }
+
+    &--sub {
+      font-size: 1.2rem;
+      font-family: "Raleway", sans-serif;
+      font-weight: 500;
+    }
+  }
+
+  &__text {
+    &--sub {
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 1.7;
+    }
+
+    &--link,
+    &--link:link,
+    &--link:visited {
+      display: block;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: $color-primary;
+      text-align: center;
+      border: 1px solid #f6ecdb;
+      padding: 1rem;
+      margin-top: 1.2rem;
+    }
+  }
+}
